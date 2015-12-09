@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="12" column="4">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="13" column="4">
+      <widget class="QPushButton" name="draw_btn">
+       <property name="text">
+        <string>Draw</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3" colspan="2">
+      <widget class="QLineEdit" name="hor_rad_ledit"/>
+     </item>
+     <item row="3" column="3" colspan="2">
+      <widget class="QLineEdit" name="ver_rad_ledit"/>
+     </item>
+     <item row="2" column="3" colspan="2">
+      <widget class="QLabel" name="ver_rad_lbl">
+       <property name="text">
+        <string>Введите радиус окружностей по вертикали</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="3">
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="8" column="3" colspan="2">
+      <widget class="QLabel" name="big_rad_lbl">
+       <property name="text">
+        <string>Введите радиус большей центральной окружности</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="3" rowspan="2" colspan="2">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../test.jpg</pixmap>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="1" rowspan="2">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="3" colspan="2">
+      <widget class="QLabel" name="diag_size_lbl">
+       <property name="text">
+        <string>Введите размер диагонали</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="3" colspan="2">
+      <widget class="QLineEdit" name="big_rad_ledit"/>
+     </item>
+     <item row="1" column="3" colspan="2">
+      <widget class="QLineEdit" name="diag_size_ledit"/>
+     </item>
+     <item row="7" column="3" colspan="2">
+      <widget class="QLineEdit" name="lit_rad_ledit"/>
+     </item>
+     <item row="12" column="0" rowspan="2">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="4" column="3" colspan="2">
+      <widget class="QLabel" name="hor_rad_lbl">
+       <property name="text">
+        <string>Введите радиус дуг по горизонтали</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3" colspan="2">
+      <widget class="QLabel" name="lit_rad_lbl">
+       <property name="text">
+        <string>Введите радиус меньшей центральной окружности</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="2" rowspan="2">
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="0" rowspan="12" colspan="3">
+      <widget class="MyGraphicsView" name="graphicsView"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>mygraphicsview</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
