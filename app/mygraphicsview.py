@@ -10,7 +10,6 @@ class MyGraphicsView(QtWidgets.QGraphicsView):
         self.scene = QtWidgets.QGraphicsScene(self)
 
     def draw_frame(self, h, r_vert, r_hor, r_in, r_out, modifier=lambda x: x):
-        self.modifier = modifier
         self.h2 = h / 2
         if h > 0 and r_vert > 0 and r_hor > 0 and r_in > 0 and r_out > 0 and \
                 math.sqrt((self.h2-r_vert) ** 2 / (self.h2 ** 2 + (self.h2-r_vert) ** 2)) * self.h2 >= r_out and \
@@ -39,8 +38,7 @@ class MyGraphicsView(QtWidgets.QGraphicsView):
             self.scene.addLine(_X, _y, X, _y)
             self.scene.addItem(text)
 
-    def draw_figure(self, h, r_vert, r_hor, r_in, r_out):
-        print(self._convert_x(0), self._convert_y(0))
+    def draw_figure(self, h, r_vert, r_hor, r_in, r_out, modifier=lambda x: x):
         pen = QtGui.QPen(QtCore.Qt.red)
         for x1, y1, x2, y2 in self._create_item(h, r_vert, r_hor, r_in, r_out):
             self.scene.addLine(x1, y1, x2, y2, pen)
@@ -58,7 +56,7 @@ class MyGraphicsView(QtWidgets.QGraphicsView):
                 x, y = xt, yt
 
     def _convert_x(self, x):
-        return self.modifier(x) + self.width()/2-20
+        return x + self.width()/2-20
 
     def _convert_y(self, y):
-        return -self.modifier(y) + self.height()/2 - 120
+        return -y + self.height()/2 - 120

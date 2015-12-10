@@ -1,1 +1,1 @@
-from .MainWindow import Ui_Form as MainWindow
+from .MainWindow2 import Ui_Form as MainWindow

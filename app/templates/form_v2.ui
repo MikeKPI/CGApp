@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="MyGraphicsView" name="graphicsView"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Lab 0</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="10" column="2">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="11" column="2">
+            <widget class="QPushButton" name="draw_lab0_btn">
+             <property name="text">
+              <string>Draw</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="0" rowspan="12">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap>../../test.jpg</pixmap>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLabel" name="diag_size_lbl">
+             <property name="text">
+              <string>Введите размер диагонали D</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QLineEdit" name="diag_size_ledit"/>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QLabel" name="big_rad_lbl">
+             <property name="text">
+              <string>Введите радиус R</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QLineEdit" name="big_rad_ledit"/>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QLabel" name="lit_rad_lbl">
+             <property name="text">
+              <string>Введите радиус r</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1" colspan="2">
+            <widget class="QLineEdit" name="lit_rad_ledit"/>
+           </item>
+           <item row="6" column="1" colspan="2">
+            <widget class="QLabel" name="hor_rad_lbl">
+             <property name="text">
+              <string>Введите радиус r1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1" colspan="2">
+            <widget class="QLineEdit" name="hor_rad_ledit"/>
+           </item>
+           <item row="8" column="1" colspan="2">
+            <widget class="QLabel" name="ver_rad_lbl">
+             <property name="text">
+              <string>Введите радиус r2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1" colspan="2">
+            <widget class="QLineEdit" name="ver_rad_ledit"/>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Lab 1</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QTabWidget" name="tabWidget_2">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="tab_8">
+              <attribute name="title">
+               <string>Евклидовы</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <layout class="QGridLayout" name="gridLayout_6">
+                 <item row="1" column="1">
+                  <widget class="QLineEdit" name="mv_axis_y_evk_ledit"/>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLineEdit" name="mv_axis_x_evk_ledit"/>
+                 </item>
+                 <item row="1" column="4">
+                  <widget class="QPushButton" name="move_evk_btn">
+                   <property name="text">
+                    <string>Перемещение</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="QLabel" name="label_16">
+                   <property name="text">
+                    <string>угол поворота</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_14">
+                   <property name="text">
+                    <string>X</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2" colspan="2">
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="3" column="4">
+                  <widget class="QPushButton" name="rotate_evk_btn">
+                   <property name="text">
+                    <string>Поворот</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QLabel" name="label_15">
+                   <property name="text">
+                    <string>Y</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="2">
+                  <widget class="QLineEdit" name="rt_angle_evk_ledit"/>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLineEdit" name="rt_x_center_evk_ledit"/>
+                 </item>
+                 <item row="3" column="3">
+                  <spacer name="horizontalSpacer_5">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QLineEdit" name="rt_y_center_evk_ledit"/>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_17">
+                   <property name="text">
+                    <string>Ось Х</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="label_18">
+                   <property name="text">
+                    <string>Ось Y</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_9">
+              <attribute name="title">
+               <string>Проективные</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <layout class="QGridLayout" name="gridLayout_4">
+                 <item row="1" column="3">
+                  <widget class="QLineEdit" name="vec_y_1_ledit"/>
+                 </item>
+                 <item row="2" column="4">
+                  <widget class="QLineEdit" name="vec_r0_2_ledit"/>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string>X</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="QLineEdit" name="vec_r0_0_ledit"/>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="label_9">
+                   <property name="text">
+                    <string>Y</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QLineEdit" name="vec_y_0_ledit"/>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QLineEdit" name="vec_x_0_ledit"/>
+                 </item>
+                 <item row="0" column="4">
+                  <widget class="QLineEdit" name="vec_x_2_ledit"/>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QLabel" name="label_10">
+                   <property name="text">
+                    <string>R0</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QLineEdit" name="vec_r0_1_ledit"/>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QLineEdit" name="vec_x_1_ledit"/>
+                 </item>
+                 <item row="1" column="4">
+                  <widget class="QLineEdit" name="vec_y_2_ledit"/>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="draw_lab1_transform_btn">
+                   <property name="text">
+                    <string>Draw</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="transform_lab1_transform_btn">
+                   <property name="text">
+                    <string>Transform</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_10">
+              <attribute name="title">
+               <string>Афинные</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <layout class="QGridLayout" name="gridLayout_5">
+                 <item row="1" column="3">
+                  <widget class="QLineEdit" name="ry_1_afin_ledit"/>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QLineEdit" name="rx_0_afin_ledit"/>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="label_11">
+                   <property name="text">
+                    <string>Rx</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QLineEdit" name="r0_1_afin_ledit"/>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QLineEdit" name="rx_1_afin_ledit"/>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="QLineEdit" name="r0_0_afin_ledit"/>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="label_12">
+                   <property name="text">
+                    <string>Ry</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QLineEdit" name="ry_0_afin_ledit"/>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QLabel" name="label_13">
+                   <property name="text">
+                    <string>R0</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="draw_lab1_afin_btn">
+                   <property name="text">
+                    <string>Draw</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="transform_lab1_afin_btn">
+                   <property name="text">
+                    <string>Transform</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <spacer name="horizontalSpacer_3">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_3">
+        <attribute name="title">
+         <string>Lab 2</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_4">
+        <attribute name="title">
+         <string>Lab 3</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_5">
+        <attribute name="title">
+         <string>Lab 4</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_6">
+        <attribute name="title">
+         <string>Lab 5</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tab_7">
+        <attribute name="title">
+         <string>Lab 6</string>
+        </attribute>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>mygraphicsview</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

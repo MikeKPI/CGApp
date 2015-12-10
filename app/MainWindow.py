@@ -95,8 +95,6 @@ class Ui_Form(QtWidgets.QWidget):
             r1 = int(self.ver_rad_ledit.text() or '20')
             r2 = int(self.hor_rad_ledit.text() or '20')
             D = int(self.diag_size_ledit.text() or '100')
-            # self.graphicsView.draw_grid()
-            # self.graphicsView.draw_figure(D, r1, r2, r, R)
             self.graphicsView.draw_frame(D, r1, r2, r, R)
         except Exception as e:
             print(e)
