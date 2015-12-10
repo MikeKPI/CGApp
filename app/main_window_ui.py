@@ -8,12 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_Form(QtWidgets.QWidget):
-    def __init__(self):
-        super(Ui_Form, self).__init__()
-        self.setupUi(self)
-        self.show()
-
+class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(900, 1000)
@@ -41,7 +36,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.gridLayout_2.addItem(spacerItem1, 11, 1, 1, 1)
         self.label = QtWidgets.QLabel(self.tab)
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("figure.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("../../test.jpg"))
         self.label.setObjectName("label")
         self.gridLayout_2.addWidget(self.label, 0, 0, 12, 1)
         self.diag_size_lbl = QtWidgets.QLabel(self.tab)
@@ -75,6 +70,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.ver_rad_ledit.setObjectName("ver_rad_ledit")
         self.gridLayout_2.addWidget(self.ver_rad_ledit, 9, 1, 1, 2)
         self.label_7 = QtWidgets.QLabel(self.tab)
+        self.label_7.setText("")
         self.label_7.setObjectName("label_7")
         self.gridLayout_2.addWidget(self.label_7, 10, 1, 1, 1)
         self.horizontalLayout_2.addLayout(self.gridLayout_2)
@@ -262,71 +258,46 @@ class Ui_Form(QtWidgets.QWidget):
         self.gridLayout.addWidget(self.tabWidget, 1, 0, 1, 1)
         self.horizontalLayout.addLayout(self.gridLayout)
 
-        self.draw_lab0_btn.clicked.connect(self._draw_frame)
-
         self.retranslateUi(Form)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
-        self._translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(self._translate("Form", "Form"))
-        self.draw_lab0_btn.setText(self._translate("Form", "Draw"))
-        self.diag_size_lbl.setText(self._translate("Form", "Введите размер диагонали D"))
-        self.big_rad_lbl.setText(self._translate("Form", "Введите радиус R"))
-        self.lit_rad_lbl.setText(self._translate("Form", "Введите радиус r"))
-        self.hor_rad_lbl.setText(self._translate("Form", "Введите радиус r1"))
-        self.ver_rad_lbl.setText(self._translate("Form", "Введите радиус r2"))
-        self.label_7.setText(self._translate("Form", ""))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), self._translate("Form", "Lab 0"))
-        self.move_evk_btn.setText(self._translate("Form", "Перемещение"))
-        self.label_16.setText(self._translate("Form", "угол поворота"))
-        self.label_14.setText(self._translate("Form", "X"))
-        self.rotate_evk_btn.setText(self._translate("Form", "Поворот"))
-        self.label_15.setText(self._translate("Form", "Y"))
-        self.label_17.setText(self._translate("Form", "Ось Х"))
-        self.label_18.setText(self._translate("Form", "Ось Y"))
-        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_8), self._translate("Form", "Евклидовы"))
-        self.label_8.setText(self._translate("Form", "X"))
-        self.label_9.setText(self._translate("Form", "Y"))
-        self.label_10.setText(self._translate("Form", "R0"))
-        self.draw_lab1_transform_btn.setText(self._translate("Form", "Draw"))
-        self.transform_lab1_transform_btn.setText(self._translate("Form", "Transform"))
-        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_9), self._translate("Form", "Проективные"))
-        self.label_11.setText(self._translate("Form", "Rx"))
-        self.label_12.setText(self._translate("Form", "Ry"))
-        self.label_13.setText(self._translate("Form", "R0"))
-        self.draw_lab1_afin_btn.setText(self._translate("Form", "Draw"))
-        self.transform_lab1_afin_btn.setText(self._translate("Form", "Transform"))
-        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_10), self._translate("Form", "Афинные"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), self._translate("Form", "Lab 1"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), self._translate("Form", "Lab 2"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), self._translate("Form", "Lab 3"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), self._translate("Form", "Lab 4"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), self._translate("Form", "Lab 5"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_7), self._translate("Form", "Lab 6"))
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.draw_lab0_btn.setText(_translate("Form", "Draw"))
+        self.diag_size_lbl.setText(_translate("Form", "Введите размер диагонали D"))
+        self.big_rad_lbl.setText(_translate("Form", "Введите радиус R"))
+        self.lit_rad_lbl.setText(_translate("Form", "Введите радиус r"))
+        self.hor_rad_lbl.setText(_translate("Form", "Введите радиус r1"))
+        self.ver_rad_lbl.setText(_translate("Form", "Введите радиус r2"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Form", "Lab 0"))
+        self.move_evk_btn.setText(_translate("Form", "Перемещение"))
+        self.label_16.setText(_translate("Form", "угол поворота"))
+        self.label_14.setText(_translate("Form", "X"))
+        self.rotate_evk_btn.setText(_translate("Form", "Поворот"))
+        self.label_15.setText(_translate("Form", "Y"))
+        self.label_17.setText(_translate("Form", "Ось Х"))
+        self.label_18.setText(_translate("Form", "Ось Y"))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_8), _translate("Form", "Евклидовы"))
+        self.label_8.setText(_translate("Form", "X"))
+        self.label_9.setText(_translate("Form", "Y"))
+        self.label_10.setText(_translate("Form", "R0"))
+        self.draw_lab1_transform_btn.setText(_translate("Form", "Draw"))
+        self.transform_lab1_transform_btn.setText(_translate("Form", "Transform"))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_9), _translate("Form", "Проективные"))
+        self.label_11.setText(_translate("Form", "Rx"))
+        self.label_12.setText(_translate("Form", "Ry"))
+        self.label_13.setText(_translate("Form", "R0"))
+        self.draw_lab1_afin_btn.setText(_translate("Form", "Draw"))
+        self.transform_lab1_afin_btn.setText(_translate("Form", "Transform"))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_10), _translate("Form", "Афинные"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "Lab 1"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Form", "Lab 2"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("Form", "Lab 3"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), _translate("Form", "Lab 4"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("Form", "Lab 5"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_7), _translate("Form", "Lab 6"))
 
-    def _draw_frame(self):
-        self._draw_grid()
-        self._draw_figure()
-
-    def _draw_figure(self):
-        try:
-            R = int(self.big_rad_ledit.text() or '20')
-            r = int(self.lit_rad_ledit.text() or '10')
-            r1 = int(self.ver_rad_ledit.text() or '20')
-            r2 = int(self.hor_rad_ledit.text() or '20')
-            D = int(self.diag_size_ledit.text() or '100')
-            self.graphicsView.draw_figure(D, r1, r2, r, R)
-        except Exception as e:
-            self.label_7.setText(self._translate("Form", str(e)))
-
-    def _draw_grid(self):
-        try:
-            H = int(self.diag_size_ledit.text() or '100') * 1.2
-            self.graphicsView.draw_grid(int(H))
-        except Exception as e:
-            self.label_7.setText(self._translate("Form", str(e)))
-
-from .mygraphicsview import MyGraphicsView
+from mygraphicsview import MyGraphicsView

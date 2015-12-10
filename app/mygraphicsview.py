@@ -45,7 +45,7 @@ class MyGraphicsView(QtWidgets.QGraphicsView):
         self.setScene(self.scene)
 
     def _create_item(self, h, r_vert, r_hor, r_in, r_out):
-        from .drawer import draw_bow, default_figure
+        from app.drawer import draw_bow, default_figure
         prec = 100
         for polygon_t in default_figure(h, r_vert, r_hor, r_in, r_out):
             polygon = ((self._convert_x(x), self._convert_y(y))
