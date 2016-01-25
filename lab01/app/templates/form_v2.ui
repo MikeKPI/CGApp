@@ -22,7 +22,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -145,7 +145,7 @@
            <item row="0" column="0">
             <widget class="QTabWidget" name="tabWidget_2">
              <property name="currentIndex">
-              <number>2</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="tab_8">
               <attribute name="title">
@@ -271,10 +271,18 @@
                <item>
                 <layout class="QGridLayout" name="gridLayout_4">
                  <item row="1" column="3">
-                  <widget class="QLineEdit" name="vec_y_1_ledit"/>
+                  <widget class="QLineEdit" name="vec_y_1_ledit">
+                   <property name="text">
+                    <string>-40</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="2" column="4">
-                  <widget class="QLineEdit" name="vec_r0_2_ledit"/>
+                  <widget class="QLineEdit" name="vec_r0_2_ledit">
+                   <property name="text">
+                    <string>1000</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="0" column="1">
                   <widget class="QLabel" name="label_8">
@@ -287,7 +295,11 @@
                   </widget>
                  </item>
                  <item row="2" column="2">
-                  <widget class="QLineEdit" name="vec_r0_0_ledit"/>
+                  <widget class="QLineEdit" name="vec_r0_0_ledit">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="1" column="1">
                   <widget class="QLabel" name="label_9">
@@ -300,13 +312,25 @@
                   </widget>
                  </item>
                  <item row="1" column="2">
-                  <widget class="QLineEdit" name="vec_y_0_ledit"/>
+                  <widget class="QLineEdit" name="vec_y_0_ledit">
+                   <property name="text">
+                    <string>80</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="0" column="2">
-                  <widget class="QLineEdit" name="vec_x_0_ledit"/>
+                  <widget class="QLineEdit" name="vec_x_0_ledit">
+                   <property name="text">
+                    <string>40</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="0" column="4">
-                  <widget class="QLineEdit" name="vec_x_2_ledit"/>
+                  <widget class="QLineEdit" name="vec_x_2_ledit">
+                   <property name="text">
+                    <string>3</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="2" column="1">
                   <widget class="QLabel" name="label_10">
@@ -319,13 +343,25 @@
                   </widget>
                  </item>
                  <item row="2" column="3">
-                  <widget class="QLineEdit" name="vec_r0_1_ledit"/>
+                  <widget class="QLineEdit" name="vec_r0_1_ledit">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="0" column="3">
-                  <widget class="QLineEdit" name="vec_x_1_ledit"/>
+                  <widget class="QLineEdit" name="vec_x_1_ledit">
+                   <property name="text">
+                    <string>90</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="1" column="4">
-                  <widget class="QLineEdit" name="vec_y_2_ledit"/>
+                  <widget class="QLineEdit" name="vec_y_2_ledit">
+                   <property name="text">
+                    <string>5</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="1" column="0">
                   <widget class="QPushButton" name="draw_lab1_transform_btn">

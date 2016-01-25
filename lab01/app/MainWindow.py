@@ -47,17 +47,16 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
             D = int(self.diag_size_ledit.text() or '100')
             self.graphicsView.draw_figure(D, r1, r2, r, R, modifier=modifier)
         except Exception as e:
-            pass
+            raise
 
     def _draw_grid(self, modifier=lambda x, y: (x, y)):
         try:
             H = int(self.diag_size_ledit.text() or '100') * 1.2
             self.graphicsView.draw_grid(int(H), modifier=modifier)
         except Exception as e:
-            pass
+            raise
 
     def affine_morf_action(self):
-        print('Hao')
         try:
             affine_matrix = np.matrix([
                 [float(self.rx_0_afin_ledit.text() or '1'),
@@ -90,7 +89,7 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
             self._draw_grid()
             self._draw_figure(modifier=lambda x, y: (np.matrix([x, y, 1]) * move_matrix).tolist()[0][:2])
         except Exception:
-            pass
+            raise
 
     def rotate_action(self):
         try:
@@ -118,25 +117,40 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
             self._draw_grid()
             self._draw_figure(modifier=lambda x, y: (np.matrix([x, y, 1]) * reverse_m * rotate_m * move_m).tolist()[0][:2])
         except Exception:
-            pass
+            raise
 
     def transform_action(self):
         try:
-            transform_m = np.matrix([
-                [float(self.vec_x_0_ledit.text() or '1'),
-                 float(self.vec_x_1_ledit.text() or '0'),
-                 float(self.vec_x_2_ledit.text() or '0')],
-                [float(self.vec_y_0_ledit.text() or '0'),
-                 float(self.vec_y_1_ledit.text() or '1'),
-                 float(self.vec_y_2_ledit.text() or '0')],
-                [float(self.vec_r0_0_ledit.text() or '0'),
-                 float(self.vec_r0_1_ledit.text() or '0'),
-                 float(self.vec_r0_2_ledit.text() or '1')]
-            ])
+            # transform_m = np.matrix([
+            #     [float(self.vec_x_0_ledit.text() or '1'),
+            #      float(self.vec_x_1_ledit.text() or '0'),
+            #      float(self.vec_x_2_ledit.text() or '0')],
+            #     [float(self.vec_y_0_ledit.text() or '0'),
+            #      float(self.vec_y_1_ledit.text() or '1'),
+            #      float(self.vec_y_2_ledit.text() or '0')],
+            #     [float(self.vec_r0_0_ledit.text() or '0'),
+            #      float(self.vec_r0_1_ledit.text() or '0'),
+            #      float(self.vec_r0_2_ledit.text() or '1')]
+            # ])
+            Xx = float(self.vec_x_0_ledit.text() or '1')
+            Yx = float(self.vec_x_1_ledit.text() or '0')
+            Wx = float(self.vec_x_2_ledit.text() or '0')
+            Xy = float(self.vec_y_0_ledit.text() or '0')
+            Yy = float(self.vec_y_1_ledit.text() or '1')
+            Wy = float(self.vec_y_2_ledit.text() or '0')
+            Rx = float(self.vec_r0_0_ledit.text() or '0')
+            Ry = float(self.vec_r0_1_ledit.text() or '0')
+            Wr = float(self.vec_r0_2_ledit.text() or '1')
 
             self.graphicsView.clear_scene()
-            modf =modifier=lambda x, y: (np.matrix([x, y, 1]) * transform_m).tolist()[0][:2]
+            # modf =modifier=lambda x, y: (np.matrix([x, y, 1]) * transform_m).tolist()[0][:2]
+            def modf(x, y):
+                r0 = np.matrix([Rx, Ry])
+                rx = np.matrix([Xx, Xy])
+                ry = np.matrix([Yx, Yy])
+                rez = (r0 * Wr + rx * Wx * x + ry * Wy * y) / (Wr + Wx * x + Wy * y)
+                return rez.tolist()[0]
             self._draw_grid(modifier=modf)
             self._draw_figure(modifier=modf)
         except Exception as e:
-            pass
+            raise
