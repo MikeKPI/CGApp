@@ -121,17 +121,6 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
 
     def transform_action(self):
         try:
-            # transform_m = np.matrix([
-            #     [float(self.vec_x_0_ledit.text() or '1'),
-            #      float(self.vec_x_1_ledit.text() or '0'),
-            #      float(self.vec_x_2_ledit.text() or '0')],
-            #     [float(self.vec_y_0_ledit.text() or '0'),
-            #      float(self.vec_y_1_ledit.text() or '1'),
-            #      float(self.vec_y_2_ledit.text() or '0')],
-            #     [float(self.vec_r0_0_ledit.text() or '0'),
-            #      float(self.vec_r0_1_ledit.text() or '0'),
-            #      float(self.vec_r0_2_ledit.text() or '1')]
-            # ])
             Xx = float(self.vec_x_0_ledit.text() or '1')
             Yx = float(self.vec_x_1_ledit.text() or '0')
             Wx = float(self.vec_x_2_ledit.text() or '0')
@@ -143,7 +132,6 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
             Wr = float(self.vec_r0_2_ledit.text() or '1')
 
             self.graphicsView.clear_scene()
-            # modf =modifier=lambda x, y: (np.matrix([x, y, 1]) * transform_m).tolist()[0][:2]
             def modf(x, y):
                 r0 = np.matrix([Rx, Ry])
                 rx = np.matrix([Xx, Xy])
