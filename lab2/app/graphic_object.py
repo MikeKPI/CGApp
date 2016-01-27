@@ -1,27 +1,6 @@
 import math
 
 
-class Parabola:
-    def __init__(self, delta=0.1, e=1, p=1):
-        self._delta = delta
-        self.e, self.p = e, p
-        self._r = lambda phi: p / (1 - e * cos(phi))
-
-    def __iter__(self):
-        new_iter = deepcopy(self)
-        new_iter.phi = 0.5 if self.e > 0 else -0.5
-        return new_iter
-
-    def __next__(self):
-        if self.phi > pi:
-            raise StopIteration
-
-        r = self._r(self.phi)
-        x, y = r * sin(self.phi), r * cos(self.phi)
-        self.phi += self._delta
-        return x, y
-
-
 class Cissoid:
     def __init__(self, from_x=-200, to_x=200, a=30, points=100):
         self._a = a

@@ -28,8 +28,6 @@ class MyGraphicsView(QtWidgets.QGraphicsView):
             xc, yc = self._convert_xy(xc, yc)
             self.scene.addLine(xp, yp, xc, yc)
 
-            # self.scene.addLine(-xp, yp, -xc, yc)
-
             xp, yp = xc, yc
 
         self.setScene(self.scene)
