@@ -1,22 +1,10 @@
+#/usr/bin/env python3.5
+
 import sys
-from PyQt5.QtCore import QCoreApplication, QThread
+from PyQt5.QtWidgets import QApplication
+from app import MainWindow
 
-class Thread1(QThread):
-    def run(self):
-        for i in range(5):
-            print("Hello {}".format(i))
+app = QApplication(sys.argv)
+gui = MainWindow()
 
-
-class Thread2(QThread):
-    def run(self):
-        t2 = Thread1()
-        t2.start()
-        for i in range(2):
-            print("world {}".format(i))
-
-if __name__ == '__main__':
-    app = QCoreApplication(sys.argv)
-    p1 = Thread2()
-    p1.start()
-    p1.wait()
-    print('EEEha')
+sys.exit(app.exec_())

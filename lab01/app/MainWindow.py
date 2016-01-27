@@ -132,12 +132,14 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
             Wr = float(self.vec_r0_2_ledit.text() or '1')
 
             self.graphicsView.clear_scene()
+
             def modf(x, y):
                 r0 = np.matrix([Rx, Ry])
                 rx = np.matrix([Xx, Xy])
                 ry = np.matrix([Yx, Yy])
                 rez = (r0 * Wr + rx * Wx * x + ry * Wy * y) / (Wr + Wx * x + Wy * y)
                 return rez.tolist()[0]
+
             self._draw_grid(modifier=modf)
             self._draw_figure(modifier=modf)
         except Exception as e:
