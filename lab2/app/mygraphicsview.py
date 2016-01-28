@@ -46,15 +46,16 @@ class MyGraphicsView(QtWidgets.QGraphicsView):
     def mousePressEvent(self, event):
 
         position = self.mapToScene(QtCore.QPoint(event.x(), event.y()))
-        x, y = self._convert_xy(position.x(), self.figure_iter.get_y(position.x()))
+        x, y = self._convert_xy(position.x(),
+                                self.figure_iter.get_y(position.x()))
         if abs(y - position.y()) < 10:
             tangent = self.figure_iter.derivative(x)
             p1x, p1y = self._convert_xy(tangent[0][0], tangent[0][1])
             p2x, p2y = self._convert_xy(tangent[1][0], tangent[1][1])
             self.scene.addLine(p1x, p1y, p2x, p2y,
                                QtGui.QPen(QtCore.Qt.blue))
-            self.scene.addEllipse(x, y, 5, 5,
-                                  QtGui.QPen(QtCore.Qt.red), QtGui.QBrush(QtCore.Qt.SolidPattern))
+            self.scene.addEllipse(x, y, 5, 5, QtGui.QPen(QtCore.Qt.red),
+                                  QtGui.QBrush(QtCore.Qt.SolidPattern))
 
 
             x1, y1 = rotate(90, p1x, p1y, x, y)

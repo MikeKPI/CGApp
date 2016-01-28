@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__name__))+'/app')
 from PyQt5 import QtCore, QtWidgets, QtGui
 
 from app.main_window_ui import Ui_Form
-from app.graphic_object import Parabola, Cissoid
+from app.graphic_object import Cissoid
 from app.transformations import rotate, move
 
 

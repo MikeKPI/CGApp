@@ -23,4 +23,5 @@ class Cissoid:
     def __iter__(self):
         get_point = lambda x: (x, self.get_y(x))
         delta = (self.to_x - self.from_x) / self.points
-        return map(get_point, (self.from_x + i * delta for i in range(self.points + 1)))
+        return map(get_point,
+                   (self.from_x + i * delta for i in range(self.points + 1)))
